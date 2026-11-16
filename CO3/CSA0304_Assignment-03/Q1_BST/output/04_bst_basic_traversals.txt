@@ -1,0 +1,11 @@
+=== 1. Basic operations and traversals ===
+Inserted: 50 30 70 20 40 60 80 65 35
+Tree (bracket form): 50(30(20,40(35,)),70(60(,65),80))
+  preorder   : 50 30 20 40 35 70 60 65 80 
+  inorder    : 20 30 35 40 50 60 65 70 80 
+  postorder  : 20 35 40 30 65 60 80 70 50 
+  levelorder : 50 30 70 20 40 60 80 35 65 
+Height = 3, nodes = 9
+search(65) -> FOUND, comparisons = 4
+search(35) -> FOUND, comparisons = 4
+search(99) -> NOT FOUND, comparisons = 3

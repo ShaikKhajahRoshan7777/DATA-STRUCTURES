@@ -1,0 +1,8 @@
+=== 5. Experiment: 2000 accession numbers ===
+                             random order sorted order
+nodes                                2000         2000
+height                                 24         1999
+avg comparisons / search            12.97      1000.50
+max comparisons                        25         2000
+BST property                    valid BST    valid BST
+ideal (balanced) height = floor(log2 2000) = 10, worst = n-1 = 1999

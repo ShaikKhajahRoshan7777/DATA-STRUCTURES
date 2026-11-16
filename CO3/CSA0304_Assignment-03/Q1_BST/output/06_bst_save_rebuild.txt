@@ -1,0 +1,5 @@
+=== 3. Save with PREORDER and rebuild ===
+original : 50(30(20,40(35,)),70(60(,65),80))
+rebuilt  : 50(30(20,40(35,)),70(60(,65),80))
+identical shape: YES
+rebuilt from INORDER file: height 8 (degenerate) vs original height 3

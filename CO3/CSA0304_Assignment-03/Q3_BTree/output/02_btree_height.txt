@@ -1,0 +1,7 @@
+=== Q3 height of a B-tree of order 100 holding 5,000,000 keys ===
+order m = 100 -> max children 100, max keys 99; minimum degree t = 50
+worst-case height  h <= log_t((n+1)/2) = log_50(2500000.5) = 3.766 -> h = 3 edges = 4 levels
+best-case (all nodes full, 99 keys): levels needed = 4 (capacity 99999999 keys)
+minimum keys for height h: 2*t^h - 1 -> h=3: 249999, h=4: 12499999  (5,000,000 lies below h=4)
+=> every search reads exactly 4 nodes; AVL needs about log2(5e6) = 22.3
+block-size rule: 4096-byte block, 8-byte key, 8-byte child pointer -> up to 255 keys/node (order 256)

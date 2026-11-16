@@ -1,0 +1,7 @@
+=== 4. Empty tree and duplicate keys ===
+empty tree: height = -1, nodes = 0
+empty tree: search(10) -> NOT FOUND, comparisons = 0
+empty tree: inorder -> []
+empty tree: delete(10) -> still empty (no crash)
+inserted 7 keys {40 20 60 20 40 60 20}: stored 3 distinct nodes
+inorder -> 20 40 60 

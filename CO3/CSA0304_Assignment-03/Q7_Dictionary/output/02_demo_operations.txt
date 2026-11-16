@@ -1,0 +1,7 @@
+=== Q7 demo on 1000 words ===
+look-up("ngomo")       -> FOUND
+look-up("qzxv")        -> missing
+autocomplete("kee")   : keechi keekdekthanathu keekthenaga keeloomkal keemchil keemnthu keenganum keengookai 
+range [daanbimtaiminra .. dainthoorsinaga] : daanbimtaiminra daarnginukku daartaaaga dageerukku daijooudan daikjadeum dailainra dailyoojumukku daimyelyaik daindaakloathu dainjaai daintemoo dainthoorsinaga 
+   (13 words)
+spell-check("szthoojook") -> 1 suggestion(s): sothoojook

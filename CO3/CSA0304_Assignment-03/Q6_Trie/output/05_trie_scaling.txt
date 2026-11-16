@@ -1,0 +1,5 @@
+=== Q6 scaling: prefix query of 3 letters ===
+names      trie nodes    trie memory  array memory   count (us) autocmp (us) strncmp scan(us)
+500              1866       393.6 KB          7 KB        0.022        0.666          7.8
+5000            12063      2544.5 KB         73 KB        0.019        2.596         79.9
+50000           78061     16466.0 KB        732 KB        0.021        1.894        769.8

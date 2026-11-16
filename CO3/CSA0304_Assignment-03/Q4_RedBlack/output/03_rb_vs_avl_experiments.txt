@@ -1,0 +1,17 @@
+=== Q4 experiments: 10000 random insertions and deletions ===
+                                  red-black          AVL
+rotations, 10000 insertions            5777         7018
+  per insertion                       0.578        0.702
+  max in one insertion                    2            2
+rotations, 10000 deletions             3769         3648
+  per deletion                        0.377        0.365
+  max in one deletion                     3            6
+height after 10000 inserts               16           16
+black-height of red-black                 8            -
+bound: RB height <= 2*log2(n+1) = 26.6; AVL height <= 1.44*log2(n+2) = 19.1
+property check after every operation: 0 failures in 20000 red-black ops, 0 failures in 20000 AVL ops
+tree empty after deleting all keys: yes
+--- increasing order 1..100000 ---
+red-black: height 31 levels, 99969 rotations, black-height 16, valid: yes (checked every 5000 inserts: 0 failures)
+AVL      : height 17 levels
+plain BST would have height 100000

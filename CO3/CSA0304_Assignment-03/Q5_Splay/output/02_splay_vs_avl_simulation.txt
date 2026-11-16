@@ -1,0 +1,13 @@
+=== Q5 simulation: 10000 accesses over 1000 products, hot set = 50 products (5%) ===
+                                       splay tree       AVL tree
+--- SKEWED (80% of accesses to 5% of keys) workload ---
+avg nodes visited per access                 8.14          10.24
+  last 5000 accesses only                    8.18              -
+worst single access (nodes)                    25             12
+splay rotations per access                   7.14
+--- UNIFORM workload ---
+avg nodes visited per access                12.43           9.20
+  last 5000 accesses only                   12.45              -
+worst single access (nodes)                    27             12
+splay rotations per access                  11.43
+log2(1000) = 9.97, AVL height = 12

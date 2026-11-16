@@ -1,0 +1,18 @@
+=== Q4 trace: red-black insertion of 10, 20, 30, 15, 25, 5  (R = red, B = black) ===
+insert 10 (new node is RED)
+      root 10 recoloured BLACK
+   tree: 10B   [rotations so far: 0, valid: yes]
+insert 20 (new node is RED)
+   tree: 10B(,20R)   [rotations so far: 0, valid: yes]
+insert 30 (new node is RED)
+      recolour: 20 -> BLACK, 10 -> RED; rotate LEFT at 10
+   tree: 20B(10R,30R)   [rotations so far: 1, valid: yes]
+insert 15 (new node is RED)
+      recolour: parent 10 and uncle 30 -> BLACK, grandparent 20 -> RED
+      root 20 recoloured BLACK
+   tree: 20B(10B(,15R),30B)   [rotations so far: 1, valid: yes]
+insert 25 (new node is RED)
+   tree: 20B(10B(,15R),30B(25R,))   [rotations so far: 1, valid: yes]
+insert 5 (new node is RED)
+   tree: 20B(10B(5R,15R),30B(25R,))   [rotations so far: 1, valid: yes]
+height = 3 levels, black-height = 2

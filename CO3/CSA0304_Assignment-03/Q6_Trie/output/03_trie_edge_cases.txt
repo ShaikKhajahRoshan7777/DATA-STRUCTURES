@@ -1,0 +1,8 @@
+=== Q6 edge cases ===
+empty prefix ""      : count = 6 (all contacts); first 3: anand anitha anu 
+whole word "anu"     : count = 2 ("anu" itself + "anusuya"); list: anu anusuya 
+whole word "arun"    : count = 1; list: arun 
+no match "xyz"       : count = 0; list: []
+no match "anq"       : count = 0
+hand check of "an"   : expected anand, anitha, anu, anusuya -> got: anand anitha anu anusuya 
+hand check of "a"    : expected anand, anitha, anu, anusuya, arun -> got: anand anitha anu anusuya arun 

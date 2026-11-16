@@ -1,0 +1,18 @@
+=== Q2 experiments: 100000 keys ===
+--- SORTED insertion 1..100000 ---
+                                plain BST            AVL
+height (levels)                    100000             17
+insert time (ms)                  21876.0           13.2
+search time, 10000 (ms)           1380.35          2.139
+avg nodes visited / search        49211.2          15.68
+AVL rotations: LL=0 RR=99983 LR=0 RL=0  (single-rotation equivalents: 99983)
+AVL balance-factor check: 100000 nodes, 0 violations
+--- RANDOM insertion of 100000 keys ---
+                                plain BST            AVL
+height (levels)                        36             20
+insert time (ms)                     17.3           37.1
+search time, 10000 (ms)              1.64          1.052
+avg nodes visited / search           20.8          15.95
+AVL rotations: LL=11569 RR=11725 LR=11450 RL=11744  (single-rotation equivalents: 69682)
+AVL balance-factor check: 100000 nodes, 0 violations
+theory: AVL height <= 1.44*log2(n+2) = 23.9 levels; log2(100000) = 16.6

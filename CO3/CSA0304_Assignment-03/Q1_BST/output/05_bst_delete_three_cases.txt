@@ -1,0 +1,14 @@
+=== 2. Deletion - all three cases ===
+Start        : 50(30(20,40(35,)),70(60(,65),80))   [valid BST]
+delete 20  (leaf)
+  -> case 1 (leaf, simply removed)
+  tree : 50(30(,40(35,)),70(60(,65),80))
+  inorder: 30 35 40 50 60 65 70 80   [valid BST]
+delete 40  (node with one child)
+  -> case 2 (one child, child takes its place)
+  tree : 50(30(,35),70(60(,65),80))
+  inorder: 30 35 50 60 65 70 80   [valid BST]
+delete 50  (node with two children (root))
+  -> case 3 (two children, replaced by inorder successor)
+  tree : 60(30(,35),70(65,80))
+  inorder: 30 35 60 65 70 80   [valid BST]

@@ -1,0 +1,12 @@
+=== Q3 simulation: 5000000 keys, 20000 random searches per structure ===
+B-tree (order 100): built in 1400 ms, height 3 edges, 72868 nodes, 68.6 keys/node (69% full)
+  search smallest key (1)       : found, 4 reads
+  search largest key (5000000)  : found, 4 reads
+  search missing key (5000001)  : missing, 4 reads
+BST (random order) : built in 6010 ms
+AVL tree           : built in 8651 ms, height 27 levels
+
+structure        avg visits   max visits   avg time @10ms   max time @10ms
+BST (random)          28.75           50           288 ms           500 ms
+AVL                   21.66           26           217 ms           260 ms
+B-tree (m=100)         3.99            4            40 ms            40 ms

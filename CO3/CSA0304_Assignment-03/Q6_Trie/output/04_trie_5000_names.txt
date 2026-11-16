@@ -1,0 +1,7 @@
+=== Q6 phone book with 5,000 names ===
+first names: libaba makale momari neravo nutaku ...
+trie nodes = 12063, memory = 2544.5 KB  (2.4 nodes per name)
+typed "k": trie count = 500, strncmp scan count = 500  (match)
+typed "ka": trie count = 100, strncmp scan count = 100  (match)
+typed "kam": trie count = 10, strncmp scan count = 10  (match)
+autocomplete("kam") first 5: kamaku kamali kameri kamesa kamibo 

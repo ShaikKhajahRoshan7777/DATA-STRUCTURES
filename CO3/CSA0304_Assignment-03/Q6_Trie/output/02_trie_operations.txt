@@ -1,0 +1,14 @@
+=== Q6 trie operations on a small contact list ===
+inserted 8 contacts -> 28 nodes (incl. root), 216 bytes each, 6048 bytes total
+search("anu") = 1, search("an") = 0, search("ravi") = 1, search("rav") = 0
+count_prefix("a") = 5
+count_prefix("an") = 4
+count_prefix("anu") = 2
+count_prefix("ba") = 2
+count_prefix("z") = 0
+autocomplete("an")  : anand anitha anu anusuya 
+autocomplete("ba")  : bala balaji 
+delete("anu")       : removed  (nodes 28 -> 28; "anusuya" must survive)
+   search("anu") = 0, search("anusuya") = 1, count_prefix("anu") = 1
+delete("ravi")      : removed  (nodes 28 -> 24; whole branch freed)
+delete("zzz")       : not found (no change)

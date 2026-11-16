@@ -1,0 +1,11 @@
+=== Q5 extra tests ===
+root after each of the first ten accesses (skewed workload):
+  #1  access 718  -> root 718      #2  access 444  -> root 444 
+  #3  access 537  -> root 537      #4  access 30   -> root 30  
+  #5  access 314  -> root 314      #6  access 282  -> root 282 
+  #7  access 36   -> root 36       #8  access 314  -> root 314 
+  #9  access 582  -> root 582      #10 access 328  -> root 328 
+chain built by inserting 1..1000 without splaying: height 1000
+worst single access: key 1000 visits 1000 nodes (O(n)) - then it becomes the root
+then access 1,2,3,...,1000 in sorted order: 2998 visits in total = 3.00 per access
+sorted sweep repeated: 5.37 nodes per access (amortised cost stays tiny)

@@ -1,0 +1,10 @@
+=== Q4 scheduler demo: smallest CPU time = leftmost node ===
+tree: 420B(150R(75B,310B(205R,)),640B(530R,980R))
+pick 1: walk to leftmost = 75 (2 steps down); cached pointer = 75 (0 steps)
+        removed 75 -> new tree: 420B(205R(150B,310B),640B(530R,980R))   [valid: yes]
+pick 2: walk to leftmost = 150 (2 steps down); cached pointer = 150 (0 steps)
+        removed 150 -> new tree: 420B(205B(,310R),640B(530R,980R))   [valid: yes]
+pick 3: walk to leftmost = 205 (1 steps down); cached pointer = 205 (0 steps)
+        removed 205 -> new tree: 420B(310B,640B(530R,980R))   [valid: yes]
+pick 4: walk to leftmost = 310 (1 steps down); cached pointer = 310 (0 steps)
+        removed 310 -> new tree: 640B(420B(,530R),980B)   [valid: yes]

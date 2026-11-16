@@ -1,0 +1,16 @@
+=== Q7 measurements on 200000 words (words_200k.txt) ===
+                                      26-ary trie   TST (chosen)   sorted array
+nodes / entries                           1069664        1069663         200000
+memory                                  220.34 MB       16.32 MB        2.99 MB
+bytes per word                             1155.2           85.6           15.7
+build time (words in random order)              -          62 ms          60 ms
+raw text of all words = 2.22 MB
+--- time per operation ---
+exact look-up (50% misspelt)                    -         384 ns         432 ns
+autocomplete, 2-3 letters, top 10               -        0.66 us        0.35 us
+range listing of 51 words                       -        8.42 us        0.70 us
+spell suggestions (edit dist 1)                 -        44.5 us        82.1 us
+--- weekly update: add 5000 new words ---
+TST incremental insert : 6.0 ms          sorted array : full re-sort 60 ms
+--- projection for 2,000,000 words (10x) ---
+TST 163.2 MB, sorted array 29.9 MB, 26-ary trie 2203 MB
