@@ -1,0 +1,9 @@
+Generated 100000 distinct registration numbers, e.g. AP01AD3350 TN38AB1463 TN99ZZ5563
+
+Max distinct outputs of (reg[0]+reg[1])%1000 for letters A-Z: 51 of 1000 buckets
+
+Hash function              Buckets  NonEmpty LongChain   Avg(all) Avg(nonempty)   SuccCmp  ns/hash
+Original (state code)         1000         6     80137     100.00     16666.67  32504.85      2.2
+Polynomial rolling b=31     100003     63156         7       1.00         1.58      1.50      7.1
+Multiplication (A=.618)     100003     63276         7       1.00         1.58      1.50     10.3
+FNV-1a (32-bit)             100003     63290         8       1.00         1.58      1.50      9.3

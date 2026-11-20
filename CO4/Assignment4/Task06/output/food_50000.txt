@@ -1,0 +1,20 @@
+=== Food-delivery simulation, N = 50000 orders ===
+Operation                    total (ms)    per op (us)
+place (hash + heap)                5.33          0.107   (50000 orders)
+look-up by order ID                1.23          0.025   (50000 found)
+cancel                             0.47          0.095   (4788 cancelled)
+assign to rider                    6.72          0.168   (40000 assigned)
+hourly report (stable)             8.25              -   (45212 rows)
+hash table: size 131072, load 0.38, longest chain 1
+orders still waiting in heap: 5212 | sizeof(Order) = 40 bytes
+CHECKS  assigned most-delayed-first ........ PASS
+        no cancelled order assigned ........ PASS
+        heap valid, positions exact ........ PASS
+        report sorted (restaurant, amount) . PASS
+        equal keys keep arrival order ...... PASS
+        placed = assigned+cancelled+waiting  PASS
+
+BASELINE single array: re-sort per assignment = 2.68 ms
+   -> 40000 assignments = 107.3 s   (heap: 0.007 s)
+BASELINE single array: linear look-up by ID = 13.3 us
+   (hash table: 0.025 us per look-up)

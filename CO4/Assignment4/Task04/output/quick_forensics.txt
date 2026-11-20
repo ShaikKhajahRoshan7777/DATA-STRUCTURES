@@ -1,0 +1,17 @@
+== Task 4.2: comparisons and maximum recursion depth, n = 10000, marks 0..100 ==
+Algorithm                  Input       Comparisons   MaxDepth
+Original quicksort         random           581131        138
+Repaired quicksort         random            99099          5
+Original quicksort         sorted         49995000       9999
+Repaired quicksort         sorted           363800          5
+
+== Task 4.1: stability, 12 scripts, equal marks (roll numbers R1..R12) ==
+input order      R1:70 R2:85 R3:70 R4:92 R5:85 R6:70 R7:60 R8:92 R9:85 R10:60 R11:70 R12:92
+original quick   R7:60 R10:60 R6:70 R1:70 R3:70 R11:70 R9:85 R5:85 R2:85 R8:92 R4:92 R12:92
+merge sort       R7:60 R10:60 R1:70 R3:70 R6:70 R11:70 R2:85 R5:85 R9:85 R4:92 R8:92 R12:92
+counting sort    R7:60 R10:60 R1:70 R3:70 R6:70 R11:70 R2:85 R5:85 R9:85 R4:92 R8:92 R12:92
+
+== Alternative: merge sort and counting sort on 10000 marks ==
+merge sort    random  comparisons = 120223
+merge sort    sorted  comparisons = 69008
+counting sort (any input) comparisons = 0, passes: n + k + n = 20101

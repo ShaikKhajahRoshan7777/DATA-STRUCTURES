@@ -1,0 +1,7 @@
+push 3  heap: [3]
+push 9  heap: [9, 3]
+push 5  heap: [9, 3, 5]
+push 7  heap: [9, 7, 5, 3]
+push 1  heap: [9, 7, 5, 3, 1]
+push 8  heap: [9, 7, 8, 3, 1, 5]
+P102(9) P106(8) P104(7) P103(5) P101(3) P105(1) 
